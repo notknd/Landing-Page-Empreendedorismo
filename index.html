@@ -54,12 +54,6 @@
             box-sizing: border-box;
         }
 
-        /* Ajuste da altura da caixa de texto para evitar transbordamento */
-        textarea {
-            height: 60px;
-            resize: vertical;
-        }
-
         button {
             display: block;
             width: 100%;
@@ -110,14 +104,13 @@
         <h1>Ouvidoria do Mircão</h1>
         <p>Uma plataforma para alunos e funcionários reportarem problemas no ambiente escolar e colaborarem em soluções!</p>
 
-        <!-- Seção de Inserção de Problema -->
         <div class="section small-section">
             <h2>Reportar um Problema</h2>
             <label for="title">Título do Problema:</label>
             <input type="text" id="title" placeholder="Título">
 
             <label for="description">Descrição:</label>
-            <textarea id="description" placeholder="Descrição do problema"></textarea>
+            <textarea id="description" rows="2" placeholder="Descrição do problema"></textarea>
 
             <label for="file">Upload de Arquivo (opcional):</label>
             <input type="file" id="file">
@@ -129,7 +122,7 @@
             <button>Enviar Problema</button>
         </div>
 
-        <!-- Seção de Problemas Públicos -->
+
         <div class="section">
             <h2>Problemas Públicos</h2>
 
