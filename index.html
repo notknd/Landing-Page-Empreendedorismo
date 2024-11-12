@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ouvidoria do Mircão</title>
+    <style>
+        body {
+            font-family: "Kanit", sans-serif;
+            font-size: large;
+            margin: 0;
+            padding: 0;
+            background-color: bisque;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .small-section {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 8px 0 4px;
+        }
+
+        input[type="text"],
+        textarea,
+        input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            margin: 4px 0 12px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .like-btn {
+            background-color: #ff9800;
+            width: auto;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+
+        .like-btn:hover {
+            background-color: #e68900;
+        }
+
+        .problem-item {
+            border-top: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .problem-title {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .funding {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ouvidoria do Mircão</h1>
+        <p>Uma plataforma para alunos e funcionários reportarem problemas no ambiente escolar e colaborarem em soluções!</p>
+
+        <div class="section small-section">
+            <h2>Reportar um Problema</h2>
+            <label for="title">Título do Problema:</label>
+            <input type="text" id="title" placeholder="Título">
+
+            <label for="description">Descrição:</label>
+            <textarea id="description" rows="2" placeholder="Descrição do problema"></textarea>
+
+            <label for="file">Upload de Arquivo (opcional):</label>
+            <input type="file" id="file">
+
+            <label>
+                <input type="checkbox" id="isPublic"> Tornar o problema público
+            </label>
+
+            <button>Enviar Problema</button>
+        </div>
+
+
+        <div class="section">
+            <h2>Problemas Públicos</h2>
+
+            <div class="problem-item">
+                <p class="problem-title">Falta de rampa de acesso para a quadra e o palco do anfi-teatro.</p>
+                <p>A quadra fechada e o anfi-teatro não possuem rampas de acesso, apenas escadas, o que dificulta o acesso de cadeirantes à essas áreas.</p>
+                <button class="like-btn">Curtir (15)</button>
+                <p class="funding">Financiamento: R$ 300 de R$ 1000 arrecadados</p>
+            </div>
+
+            <div class="problem-item">
+                <p class="problem-title">Equipamentos de laboratório quebrados</p>
+                <p>Muitos equipamentos do laboratório de ciências estão quebrados, o que prejudica as aulas práticas.</p>
+                <button class="like-btn">Curtir (12)</button>
+                <p class="funding">Financiamento: R$ 450 de R$ 1200 arrecadados</p>
+            </div>
+
+            <div class="problem-item">
+                <p class="problem-title">Banheiros do pátio principal</p>
+                <p>Os banheiros do pátio principal estão constantemente quebrados, causando desconforto para todos.</p>
+                <button class="like-btn">Curtir (20)</button>
+                <p class="funding">Financiamento: R$ 200 de R$ 800 arrecadados</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
