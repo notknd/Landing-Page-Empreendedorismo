@@ -148,8 +148,15 @@
             </div>
         </div>
     </div>
-<script>addEventListener("click", button) {
-    this.innerText = "Curtir (16)"
-}</script>
+    <script>
+        // Função para incrementar as curtidas ao clicar no botão
+        document.querySelectorAll('.like-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Obtém o número atual de curtidas e incrementa
+                const currentLikes = parseInt(this.innerText.match(/\d+/)[0]);
+                this.innerText = `Curtir (${currentLikes + 1})`;
+            });
+        });
+    </script>
 </body>
 </html>
