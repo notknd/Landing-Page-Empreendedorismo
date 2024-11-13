@@ -148,13 +148,21 @@
             </div>
         </div>
     </div>
+    
     <script>
-        // Função para incrementar as curtidas ao clicar no botão
+        // Função para incrementar curtidas apenas uma vez
         document.querySelectorAll('.like-btn').forEach(button => {
             button.addEventListener('click', function() {
-                // Obtém o número atual de curtidas e incrementa
-                const currentLikes = parseInt(this.innerText.match(/\d+/)[0]);
-                this.innerText = `Curtir (${currentLikes + 1})`;
+                // Verifica se o botão já foi clicado
+                if (!this.classList.contains('liked')) {
+                    // Incrementa o contador de curtidas
+                    const currentLikes = parseInt(this.innerText.match(/\d+/)[0]);
+                    this.innerText = `Curtir (${currentLikes + 1})`;
+                    
+                    // Marca o botão como "curtido" e o desabilita
+                    this.classList.add('liked');
+                    this.disabled = true;
+                }
             });
         });
     </script>
